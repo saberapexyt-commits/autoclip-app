@@ -1,12 +1,33 @@
 {
   "schema": 1,
   "product": "AutoClip",
-  "updated": "2026-10-05T10:28:19Z",
+  "updated": "2026-10-05T10:45:33Z",
   "latest": {
-    "stable": "1.0.4",
+    "stable": "1.0.5",
     "beta": null
   },
   "releases": [
+    {
+      "version": "1.0.5",
+      "channel": "stable",
+      "date": "2026-10-05",
+      "notes": [
+        "New title bar: AutoClip's own dark bar with the logo, current page, and minimize / maximize / close buttons. Drag it to move, double-click to maximize, drag the window edges to resize.",
+        "Fixed the Gaming / IRL buttons in Review not updating when clicked."
+      ],
+      "mandatory": false,
+      "assets": [
+        {
+          "platform": "windows-x64",
+          "kind": "installer",
+          "filename": "AutoClip-Setup-1.0.5.exe",
+          "url": "https://github.com/saberapexyt-commits/autoclip-app/releases/download/v1.0.5/AutoClip-Setup-1.0.5.exe",
+          "sha256": "da8842b69ccc8bf3f6579f6304752ddb699f37008a718432c705362f30bf8cf8",
+          "size": 167196045,
+          "signature": "w6RS1Oyc7P0iNOJhW6TQOMeS6Oo7g6+ZSGk1Xn97zzIzQgzFN9yS90JRUQU1k0V8SuhZM6ZfOeCi2CIxGT7gCQ=="
+        }
+      ]
+    },
     {
       "version": "1.0.4",
       "channel": "stable",
