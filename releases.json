@@ -1,12 +1,33 @@
 {
   "schema": 1,
   "product": "AutoClip",
-  "updated": "2026-10-05T08:57:24Z",
+  "updated": "2026-10-05T09:12:58Z",
   "latest": {
-    "stable": "1.0.0",
+    "stable": "1.0.1",
     "beta": null
   },
   "releases": [
+    {
+      "version": "1.0.1",
+      "channel": "stable",
+      "date": "2026-10-05",
+      "notes": [
+        "Fixed the taskbar and window icon so AutoClip shows its own icon.",
+        "Clip previews now use a still frame of the finished clip instead of a blank tile."
+      ],
+      "mandatory": false,
+      "assets": [
+        {
+          "platform": "windows-x64",
+          "kind": "installer",
+          "filename": "AutoClip-Setup-1.0.1.exe",
+          "url": "https://github.com/saberapexyt-commits/autoclip-app/releases/download/v1.0.1/AutoClip-Setup-1.0.1.exe",
+          "sha256": "72730a2d90f355a629a6e468734c4f2889912be0aa5e4c5fb98b05135f022867",
+          "size": 167185937,
+          "signature": "yxnCxDl7pcU1LrgtePJPGPud4XRF41j/80tcGnxy4stRdG5qw5PykGtLoT2vspItaXxAZM+fEDzQX8DQCqzZAw=="
+        }
+      ]
+    },
     {
       "version": "1.0.0",
       "channel": "stable",
