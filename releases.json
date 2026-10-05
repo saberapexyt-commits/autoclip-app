@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "product": "AutoClip",
+  "updated": "2026-10-05T08:57:24Z",
+  "latest": {
+    "stable": "1.0.0",
+    "beta": null
+  },
+  "releases": [
+    {
+      "version": "1.0.0",
+      "channel": "stable",
+      "date": "2026-10-05",
+      "notes": [
+        "First public release: a native Windows desktop app (Home, Clips, Review, Upload, Settings) with a first-run setup.",
+        "Whole-VOD analysis from picture, audio, speech and chat; clips are cut to sentence boundaries and verified after rendering.",
+        "Speech transcription with word timestamps (Whisper), on your NVIDIA GPU when you enable it, otherwise on the CPU.",
+        "Free local AI frame model (downloaded on demand) and optional Claude review of candidate clips.",
+        "Review every clip before anything leaves your PC: approve, reject, rename, edit the caption.",
+        "Upload approved clips to TikTok through TikTok's official API, to one or several connected accounts, never twice by accident.",
+        "Automatic updates: signed releases, checked and downloaded in the background, installed only when AutoClip is idle."
+      ],
+      "mandatory": false,
+      "assets": [
+        {
+          "platform": "windows-x64",
+          "kind": "installer",
+          "filename": "AutoClip-Setup-1.0.0.exe",
+          "url": "https://github.com/saberapexyt-commits/autoclip-app/releases/download/v1.0.0/AutoClip-Setup-1.0.0.exe",
+          "sha256": "3cb02c0bb939864ca3d59f9fb7d0628740b049d22c22282cc78498a7fab30208",
+          "size": 167042261,
+          "signature": "bC+obGBacK8d8G7ru248EMGn0gP9Kh0KIt2FALKOMu7bKsEEJmIR39p0Q5hBv6jx5xlP++xMgX00uNyBPYe2BA=="
+        }
+      ]
+    }
+  ]
+}

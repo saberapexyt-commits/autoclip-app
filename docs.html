@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en" data-base="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentation - AutoClip</title>
+  <meta name="description" content="How to install AutoClip, set it up, add a VOD, review clips, connect TikTok, upload, set up your GPU, fix problems and update.">
+  <meta name="theme-color" content="#060a14">
+  <link rel="canonical" href="https://saberapexyt-commits.github.io/autoclip-app/docs.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/icon-180.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AutoClip">
+  <meta property="og:title" content="Documentation - AutoClip">
+  <meta property="og:description" content="How to install AutoClip, set it up, add a VOD, review clips, connect TikTok, upload, set up your GPU, fix problems and update.">
+  <meta property="og:url" content="https://saberapexyt-commits.github.io/autoclip-app/docs.html">
+  <meta property="og:image" content="https://saberapexyt-commits.github.io/autoclip-app/assets/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>try{var t=localStorage.getItem("autoclip-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+</head>
+<body class="">
+<a class="sr" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><img src="assets/img/icon-64.png" alt="" width="34" height="34">AutoClip</a>
+    <ul id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="download.html">Download</a></li>
+      <li><a href="docs.html" class="active" aria-current="page">Docs</a></li>
+      <li><a href="changelog.html">Changelog</a></li>
+      <li><a href="support.html">Support</a></li>
+    </ul>
+    <div class="right">
+      <button class="iconbtn" id="themeBtn" aria-label="Switch light / dark theme" title="Light / dark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4l1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4l1.4-1.4"/></svg></button>
+      <a class="btn small" href="download.html">Download</a>
+      <button class="iconbtn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<div class="wrap doc">
+  <nav class="side" aria-label="Documentation sections">
+    <b>Getting started</b>
+    <a href="#install">Installing AutoClip</a><a href="#setup">First-time setup</a>
+    <b>Using AutoClip</b>
+    <a href="#add-vod">Adding a VOD</a><a href="#generate">Generating clips</a><a href="#review">Reviewing clips</a>
+    <b>TikTok</b>
+    <a href="#tiktok">Connecting TikTok</a><a href="#upload">Uploading clips</a>
+    <b>Extras</b>
+    <a href="#gpu">GPU setup</a><a href="#ai">Local AI &amp; Claude</a>
+    <b>Maintenance</b>
+    <a href="#troubleshooting">Troubleshooting</a><a href="#updating">Updating AutoClip</a><a href="#data">Your data &amp; uninstalling</a>
+  </nav>
+  <article>
+    <h1>Documentation</h1>
+    <p class="muted">Everything you need to go from download to your first uploaded clip.</p>
+
+    <h2 id="install">Installing AutoClip</h2>
+    <ol>
+      <li>Go to the <a href="download.html">download page</a> and download the installer.</li>
+      <li>Run it. If Windows shows a blue <b>SmartScreen</b> box, click <b>More info → Run anyway</b> (the installer isn't code-signed yet; you can check the SHA-256 checksum shown on the download page).</li>
+      <li>Choose whether to add a Desktop shortcut and finish. AutoClip installs for your Windows user only, so it doesn't need administrator rights.</li>
+    </ol>
+    <p>Everything AutoClip needs is included, so there's no Python, ffmpeg or anything else to install. It does use the Microsoft Edge <b>WebView2 Runtime</b> to draw its window, which is already part of Windows 11 and current Windows 10.</p>
+
+    <h2 id="setup">First-time setup</h2>
+    <p>The first time you open AutoClip, a short wizard appears. Every step can be skipped and changed later in <b>Settings</b>.</p>
+    <ol>
+      <li><b>Your folders.</b> Where you keep your VODs, and where finished clips should be saved (default: <code>Videos\AutoClip</code>).</li>
+      <li><b>Speed and AI.</b> AutoClip checks for an NVIDIA GPU and offers to enable GPU acceleration. You can also paste an optional Claude API key.</li>
+      <li><b>Connect TikTok</b> (optional). You can do this later from the Upload screen.</li>
+    </ol>
+
+    <h2 id="add-vod">Adding a VOD</h2>
+    <ol>
+      <li>Open <b>Home</b>.</li>
+      <li>Paste a Twitch or Kick VOD link, or press <b>Browse…</b> and pick a video file (<code>.mp4</code>, <code>.mkv</code>, <code>.mov</code>, <code>.ts</code>, <code>.flv</code>, <code>.webm</code> and more).</li>
+      <li>Press <b>Start analysis</b>.</li>
+    </ol>
+    <div class="note">Links need the video to be publicly viewable. For subscriber-only or deleted VODs, download the video another way and choose the file instead.</div>
+
+    <h2 id="generate">Generating clips</h2>
+    <p>While AutoClip works you'll see which stage it's on (downloading, watching the video, listening to the audio, transcribing, reviewing candidates, cutting clips). It can be cancelled at any time. When it finishes, it opens the <b>Review</b> screen.</p>
+    <p>You can tune the defaults in <b>Settings → Clip defaults</b>:</p>
+    <table>
+      <tr><th>Setting</th><th>What it does</th></tr>
+      <tr><td>Clips to find</td><td>The most clips to make per VOD.</td></tr>
+      <tr><td>Lead-in / aftermath</td><td>How many seconds of context before the action and after it.</td></tr>
+      <tr><td>Format</td><td>Vertical zoom (cropped to the action), full frame (whole picture with blurred bars), or fill (full-screen crop).</td></tr>
+      <tr><td>Thorough scan</td><td>Examines the whole VOD with every signal. Turn it off for a faster, picture-only scan.</td></tr>
+      <tr><td>Twitch chat</td><td>Uses chat activity (KEKW, POG, CLIP spikes) as a signal.</td></tr>
+      <tr><td>Burn captions</td><td>Adds subtitles from the transcript to each clip.</td></tr>
+    </table>
+    <p>If part of the analysis couldn't run, for example no speech was found or chat wasn't available, an orange notice tells you which stage and why. The clips are still made from what did work.</p>
+
+    <h2 id="review">Reviewing clips</h2>
+    <p>The <b>Clips</b> screen shows everything AutoClip made, with a preview (hover to play), a score, the length and a status. Click a clip to open <b>Review</b>.</p>
+    <ul>
+      <li><b>Approve</b> (<kbd>A</kbd>) or <b>Reject</b> (<kbd>R</kbd>). Use <kbd>←</kbd> <kbd>→</kbd> to move between clips.</li>
+      <li><b>Title</b> and <b>caption</b>: edit them and press <i>Save title &amp; caption</i>. Renaming a clip renames its file as well. The caption is what will appear on TikTok.</li>
+      <li>You can approve or reject several clips at once from the Clips screen.</li>
+    </ul>
+    <p>Nothing is uploaded until you approve a clip <i>and</i> press Upload.</p>
+
+    <h2 id="tiktok">Connecting TikTok</h2>
+    <p>AutoClip uploads through TikTok's <b>official</b> API. You sign in on tiktok.com in your own browser; AutoClip never sees your password. TikTok requires a free <i>developer app</i> to do this, which you create once:</p>
+    <ol>
+      <li>Go to <a href="https://developers.tiktok.com/">developers.tiktok.com</a>, sign in, and create an organization and an app.</li>
+      <li>In the app, fill in the details (name, icon, description, category, Terms and Privacy URLs, website) and add the products <b>Login Kit</b> and <b>Content Posting API</b>.</li>
+      <li>Under Login Kit → Redirect URI → <b>Desktop</b>, add exactly: <code>http://127.0.0.1:38125/callback/</code></li>
+      <li>While the app is in sandbox, add yourself (and each friend) as a <b>target user</b>.</li>
+      <li>Copy the app's <b>Client key</b> and <b>Client secret</b> into <b>AutoClip → Settings → TikTok</b> (or import a small file containing them) and press Save.</li>
+      <li>On the <b>Upload</b> screen press <b>Connect TikTok</b>. Your browser opens TikTok; approve AutoClip, then return to the app.</li>
+    </ol>
+    <p><b>Several accounts:</b> press <i>+ Add another account</i> on the Upload screen as many times as you like, and pick which account a batch of clips goes to.</p>
+    <h3>Drafts versus direct posting</h3>
+    <table>
+      <tr><th>Mode</th><th>What happens</th><th>Needs</th></tr>
+      <tr><td>Inbox (default)</td><td>Clips arrive as drafts in your TikTok inbox. You open the TikTok app, add sound or hashtags, and press Post.</td><td>Any approved or sandboxed developer app</td></tr>
+      <tr><td>Direct</td><td>Clips are published straight to your profile.</td><td>TikTok must audit your app. Until then every direct post is private ("only me")</td></tr>
+    </table>
+    <p>TikTok limits uploads to about 6 requests a minute and 5 unfinished drafts per day. AutoClip waits out rate limits and shows TikTok's own message if you hit the draft limit.</p>
+
+    <h2 id="upload">Uploading clips</h2>
+    <ol>
+      <li>Approve your clips in Review.</li>
+      <li>Open <b>Upload</b>, choose the account, and tick the clips you want (approved clips are ticked for you).</li>
+      <li>Press <b>Upload selected</b>.</li>
+    </ol>
+    <p>The queue shows each clip as <i>Waiting</i>, <i>Uploading</i>, <i>Processing</i>, <i>Uploaded</i> or <i>Failed</i> with the reason. A failed clip can simply be uploaded again. AutoClip won't upload the same video to the same account twice, even if you renamed it; <i>Upload again</i> asks for confirmation if you really want a second copy.</p>
+
+    <h2 id="gpu">GPU setup</h2>
+    <p>With an NVIDIA graphics card, <b>Settings → GPU acceleration → Enable</b> downloads NVIDIA's CUDA libraries once (about 1.3 GB, checked for integrity, stored in your user folder) and transcription then runs several times faster. It also makes the most accurate Whisper model (<i>Best</i>) practical.</p>
+    <ul>
+      <li>You need a current NVIDIA driver. No GPU, or a problem with it? AutoClip silently uses the CPU instead.</li>
+      <li><b>GPU use → Off</b> disables it entirely. <b>Always</b> also uses the GPU for video decoding and encoding, which is usually not faster.</li>
+      <li>Pick the Whisper model under <b>Settings → AI</b>: Automatic, Fast, Balanced or Best.</li>
+    </ul>
+
+    <h2 id="ai">Local AI &amp; Claude</h2>
+    <p>AutoClip works without any AI account. To let an AI look at real frames of each candidate clip:</p>
+    <ul>
+      <li><b>Local AI (free, private):</b> <b>Settings → AI → Local AI → Download</b> (about 305 MB, once). Press <i>Test</i> to confirm it works. It scores frames but doesn't read the transcript.</li>
+      <li><b>Claude (optional):</b> paste your Anthropic API key under Settings → AI. A few frames and transcript excerpts per candidate are sent to Anthropic; you pay Anthropic directly. It reads the transcript and writes real titles.</li>
+    </ul>
+
+    <h2 id="troubleshooting">Troubleshooting</h2>
+    <table>
+      <tr><th>Problem</th><th>What to do</th></tr>
+      <tr><td>The window opens blank or doesn't open</td><td>Install the <a href="https://go.microsoft.com/fwlink/p/?LinkId=2124703">WebView2 Runtime</a> and restart AutoClip.</td></tr>
+      <tr><td>"Download failed" for a link</td><td>Open the link in your browser to make sure the VOD is public. Otherwise download the video yourself and choose the file.</td></tr>
+      <tr><td>Orange notice: <code>[transcription]</code></td><td>Speech wasn't used. Read the message: no speech in the video, a model couldn't load, or no audio track. Settings → AI → <i>Test</i> checks transcription.</td></tr>
+      <tr><td>Clips are all called "Big explosive play"</td><td>That's the free local AI's labelling. Add a Claude key for real titles, or rename clips in Review.</td></tr>
+      <tr><td>GPU shows "Enable" even though you have one</td><td>The one-time library download hasn't been done, or the NVIDIA driver is outdated.</td></tr>
+      <tr><td>TikTok says the redirect URI doesn't match</td><td>Add exactly <code>http://127.0.0.1:38125/callback/</code> as a Desktop redirect URI in your TikTok app.</td></tr>
+      <tr><td>Port 38125 is in use</td><td>Another program is using it. Close it and press Connect TikTok again.</td></tr>
+      <tr><td>Upload failed: rate limit</td><td>AutoClip waits and retries automatically; if it still fails, wait a minute and upload again.</td></tr>
+      <tr><td>Something else</td><td>See <a href="support.html">Support</a>, and attach <code>%APPDATA%\AutoClip\autoclip.log</code>.</td></tr>
+    </table>
+
+    <h2 id="updating">Updating AutoClip</h2>
+    <p>AutoClip checks for new versions when it starts and every few hours. When one is found:</p>
+    <ul>
+      <li>A small notice appears: <b>Update now</b>, <b>Later</b> or <b>Skip</b>. The update downloads in the background and is verified (every release is digitally signed).</li>
+      <li>It's <b>never</b> installed while AutoClip is analysing a VOD, making clips or uploading. If you choose Update now during work, it waits until the work finishes.</li>
+      <li>By default a downloaded update also installs when you close AutoClip. Change this under <b>Settings → Updates</b>.</li>
+      <li>Your settings, accounts, projects and clips are kept.</li>
+    </ul>
+    <p>Under <b>Settings → Updates</b> you can check manually, switch to the Beta channel, turn automatic checks off, or install an older version if a release causes trouble. If an update is interrupted, AutoClip tells you and offers to retry.</p>
+
+    <h2 id="data">Your data &amp; uninstalling</h2>
+    <table>
+      <tr><td><code>%APPDATA%\AutoClip</code></td><td>Settings, encrypted keys and TikTok logins, projects, the upload history, downloaded models, the log file.</td></tr>
+      <tr><td><code>Videos\AutoClip</code> (or the folder you chose)</td><td>Your finished clips.</td></tr>
+      <tr><td>The program itself</td><td><code>%LOCALAPPDATA%\Programs\AutoClip</code></td></tr>
+    </table>
+    <p>Uninstalling (Windows Settings → Apps) removes only the program. Your clips and settings stay unless you delete those folders.</p>
+  </article>
+</div>
+
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/img/icon-64.png" alt="" width="34" height="34">AutoClip</a>
+        <p style="margin-top:14px;max-width:320px">Turn long stream recordings into short clips you review and post. Runs on your own PC.</p>
+      </div>
+      <div><h4>Product</h4><a href="features.html">Features</a><a href="download.html">Download</a><a href="changelog.html">Changelog</a></div>
+      <div><h4>Help</h4><a href="docs.html">Documentation</a><a href="support.html">Support</a><a href="https://github.com/saberapexyt-commits/autoclip-app/issues">Report a problem</a></div>
+      <div><h4>Legal</h4><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="cookies.html">Cookie Policy</a><a href="licenses.html">Open-source licenses</a></div>
+    </div>
+    <div class="fine"><span>© 2026 AutoClip. Version 1.0.0.</span><span>AutoClip is not affiliated with or endorsed by TikTok, Twitch or Kick.</span></div>
+  </div>
+</footer>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

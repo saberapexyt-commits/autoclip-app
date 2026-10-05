@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" data-base="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Features - AutoClip</title>
+  <meta name="description" content="Everything AutoClip does: AI VOD analysis, automatic transcription, GPU acceleration, smart clip detection, clip review, TikTok uploading with multiple accounts, and automatic updates.">
+  <meta name="theme-color" content="#060a14">
+  <link rel="canonical" href="https://saberapexyt-commits.github.io/autoclip-app/features.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/icon-180.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AutoClip">
+  <meta property="og:title" content="Features - AutoClip">
+  <meta property="og:description" content="Everything AutoClip does: AI VOD analysis, automatic transcription, GPU acceleration, smart clip detection, clip review, TikTok uploading with multiple accounts, and automatic updates.">
+  <meta property="og:url" content="https://saberapexyt-commits.github.io/autoclip-app/features.html">
+  <meta property="og:image" content="https://saberapexyt-commits.github.io/autoclip-app/assets/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>try{var t=localStorage.getItem("autoclip-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+</head>
+<body class="">
+<a class="sr" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><img src="assets/img/icon-64.png" alt="" width="34" height="34">AutoClip</a>
+    <ul id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html" class="active" aria-current="page">Features</a></li>
+      <li><a href="download.html">Download</a></li>
+      <li><a href="docs.html">Docs</a></li>
+      <li><a href="changelog.html">Changelog</a></li>
+      <li><a href="support.html">Support</a></li>
+    </ul>
+    <div class="right">
+      <button class="iconbtn" id="themeBtn" aria-label="Switch light / dark theme" title="Light / dark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4l1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4l1.4-1.4"/></svg></button>
+      <a class="btn small" href="download.html">Download</a>
+      <button class="iconbtn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<section class="hero" style="padding-bottom:10px">
+  <div class="wrap">
+    <div class="pill reveal"><i></i> One app, start to finish</div>
+    <h1 class="reveal">Built for the way <span class="gradtext">streamers</span> actually clip.</h1>
+    <p class="lead reveal">From a six-hour VOD to a queue of reviewed, captioned, vertical clips, without leaving one window.</p>
+  </div>
+</section>
+
+<section style="padding-top:30px">
+  <div class="wrap">
+    <div class="row" id="analysis">
+      <div class="txt reveal"><div class="kicker">AI VOD analysis</div><h3>It watches the whole stream so you don't have to</h3>
+        <p>AutoClip examines every second of your VOD, however long, and fuses everything it learns into one picture of where the interesting moments are.</p>
+        <ul><li>Picture: motion, HUD and kill-feed activity, flashes, banners, hard cuts</li><li>Audio: loudness against your normal volume, laughter-like bursts, excited voice, pauses</li><li>Speech: the full timestamped transcript</li><li>Chat: message spikes and hype emotes (Twitch)</li></ul></div>
+      <div class="shot reveal"><img src="assets/img/shot-home.jpg" alt="AutoClip's Home screen while a VOD is being analysed" loading="lazy" width="1568" height="740"></div>
+    </div>
+
+    <div class="row flip" id="transcription">
+      <div class="card reveal" style="padding:34px"><div class="ico"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg></div>
+        <h3>Whisper, on your PC</h3><p>Speech is transcribed locally with OpenAI's Whisper model, with word-level timestamps. Long VODs are processed in chunks with checkpoints, so an interruption never costs you the whole run.</p></div>
+      <div class="txt reveal"><div class="kicker">Automatic transcription</div><h3>Words with timestamps, not guesses</h3>
+        <p>The transcript is what lets AutoClip start a clip at the beginning of a sentence and end it when the laughter has finished.</p>
+        <ul><li>Language detected automatically</li><li>Fast, balanced or best-quality models</li><li>Bogus "thanks for watching" lines Whisper invents on music are filtered out</li></ul></div>
+    </div>
+
+    <div class="row" id="gpu">
+      <div class="txt reveal"><div class="kicker">GPU acceleration</div><h3>Use the graphics card you already own</h3>
+        <p>With an NVIDIA GPU, transcription runs several times faster and the most accurate Whisper model becomes practical. It's optional, one click in Settings, and everything keeps working on the CPU without it.</p>
+        <p class="muted">Measured on an RTX 3060 Ti (10 minutes of speech):</p>
+        <table class="t"><tr><th>Model</th><th>CPU</th><th>GPU</th></tr><tr><td>Whisper small</td><td>126 s</td><td><b>35 s</b></td></tr><tr><td>Whisper large-v3-turbo</td><td>impractical</td><td><b>26 s</b></td></tr></table>
+        <p class="faint" style="margin-top:12px;font-size:.88rem">GPU acceleration needs a one-time ~1.3&nbsp;GB download of NVIDIA's CUDA libraries. We only use the GPU where it measurably helps.</p></div>
+      <div class="card reveal" style="padding:34px"><div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Honest about what helps</h3>
+        <p>We benchmarked video decoding and encoding on the GPU too: on a modern CPU they were no faster, so they stay on the CPU by default. You can still switch them on if your PC is different.</p></div>
+    </div>
+
+    <div class="row flip" id="detection">
+      <div class="card reveal" style="padding:34px"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg></div>
+        <h3>Not fooled by shouting</h3><p>Someone yelling "no way" at a menu isn't a highlight. AutoClip only trusts a reaction when the voice sounds excited or something happened on screen just before it, and then pulls the clip back to include that cause.</p></div>
+      <div class="txt reveal"><div class="kicker">Smart clip detection</div><h3>Clips that make sense on their own</h3>
+        <p>Windows include the setup, the moment and the aftermath. Edges snap to sentence boundaries and calm moments, dead air is trimmed, and overlapping or duplicate moments are dropped.</p>
+        <ul><li>Optional AI review of real frames (free local model, Claude, or Ollama)</li><li>Every rendered clip is verified: length, size, audio, not frozen, not silent</li><li>Honest warnings if any part of the analysis couldn't run</li></ul></div>
+    </div>
+
+    <div class="row" id="video">
+      <div class="txt reveal"><div class="kicker">Video analysis</div><h3>It actually looks at the footage</h3>
+        <p>Beyond motion and flashes, AutoClip can show sampled frames from each candidate to a vision model, so "a goal was scored" is something it sees, not something it infers from volume.</p>
+        <ul><li><b>Free local AI</b>: a one-time 305 MB download, private, no account</li><li><b>Claude</b> (optional, your own API key)</li><li><b>Ollama</b> vision models, if you run them</li></ul></div>
+      <div class="shot reveal"><img src="assets/img/shot-settings.jpg" alt="AutoClip Settings: speech transcription, local AI, Claude key and GPU acceleration" loading="lazy" width="1568" height="740"></div>
+    </div>
+
+    <div class="row flip" id="review">
+      <div class="shot reveal"><img src="assets/img/shot-review.jpg" alt="Reviewing a clip: video, score, editable title and caption, approve and reject" loading="lazy" width="1568" height="740"></div>
+      <div class="txt reveal"><div class="kicker">Clip review</div><h3>You're always the editor</h3>
+        <p>Every clip is shown with its score and the reason it was picked. Watch it full-size, approve or reject it with one key, rename it (the file is renamed too) and write the caption you want.</p>
+        <ul><li><kbd>A</kbd> approve, <kbd>R</kbd> reject, arrow keys to move</li><li>Vertical 9:16 with zoom, full-frame or fill layouts</li><li>Optional burned-in captions from the transcript</li></ul></div>
+    </div>
+
+    <div class="row" id="tiktok">
+      <div class="txt reveal"><div class="kicker">TikTok uploading &middot; multiple accounts</div><h3>Official, queued and double-post-proof</h3>
+        <p>AutoClip uses TikTok's official Login Kit and Content Posting API. Connect as many TikTok accounts as you like, pick which one a batch goes to, and watch the queue.</p>
+        <ul><li>Sign-in happens on tiktok.com, never inside AutoClip</li><li>Tokens are encrypted for your Windows account only</li><li>The same video is never uploaded twice to the same account (even renamed)</li><li>Rate limits are respected automatically</li></ul>
+        <p class="faint" style="font-size:.9rem">Posting needs a free TikTok developer app. Until TikTok approves ("audits") it, clips arrive as drafts in your TikTok inbox for you to finish.</p></div>
+      <div class="shot reveal"><img src="assets/img/shot-upload.jpg" alt="Upload screen with two TikTok accounts and the upload queue" loading="lazy" width="1568" height="740"></div>
+    </div>
+
+    <div class="row flip" id="updates">
+      <div class="shot reveal"><img src="assets/img/shot-updates.jpg" alt="AutoClip Settings, Updates card: version, automatic checks and release channel" loading="lazy" width="1568" height="740"></div>
+      <div class="txt reveal"><div class="kicker">Automatic updates</div><h3>Stay current without lifting a finger</h3>
+        <p>AutoClip checks for new versions, downloads them in the background and verifies them before anything runs: every release is cryptographically signed, so a tampered or fake update is rejected.</p>
+        <ul><li>A small, dismissible notice: Update now or Later</li><li>Never installs while a VOD is processing or clips are uploading</li><li>Can install when you close the app</li><li>Settings, accounts, projects and clips are kept</li><li>Interrupted update? It tells you and offers a retry. Older versions stay available</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt tight">
+  <div class="wrap">
+    <div class="sechead reveal" style="margin-bottom:34px"><h2>And the details</h2></div>
+    <div class="grid g3">
+      <div class="card reveal"><h3>Private by design</h3><p>No AutoClip account, no servers of ours. Your videos and clips stay on your PC; secrets are encrypted per Windows user.</p></div>
+      <div class="card reveal"><h3>No silent failures</h3><p>If transcription, chat or AI review can't run, AutoClip says exactly which stage failed and why, instead of pretending everything worked.</p></div>
+      <div class="card reveal"><h3>First-run setup</h3><p>A short wizard picks your folders, checks your GPU and offers the optional extras. Skip anything you like.</p></div>
+    </div>
+    <div class="cta" style="margin-top:44px"><a class="btn big" data-fill="href" href="https://github.com/saberapexyt-commits/autoclip-app/releases/download/v1.0.0/AutoClip-Setup-1.0.0.exe"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>Download for Windows</a></div>
+  </div>
+</section>
+
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/img/icon-64.png" alt="" width="34" height="34">AutoClip</a>
+        <p style="margin-top:14px;max-width:320px">Turn long stream recordings into short clips you review and post. Runs on your own PC.</p>
+      </div>
+      <div><h4>Product</h4><a href="features.html">Features</a><a href="download.html">Download</a><a href="changelog.html">Changelog</a></div>
+      <div><h4>Help</h4><a href="docs.html">Documentation</a><a href="support.html">Support</a><a href="https://github.com/saberapexyt-commits/autoclip-app/issues">Report a problem</a></div>
+      <div><h4>Legal</h4><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="cookies.html">Cookie Policy</a><a href="licenses.html">Open-source licenses</a></div>
+    </div>
+    <div class="fine"><span>© 2026 AutoClip. Version 1.0.0.</span><span>AutoClip is not affiliated with or endorsed by TikTok, Twitch or Kick.</span></div>
+  </div>
+</footer>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
