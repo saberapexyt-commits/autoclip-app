@@ -54,7 +54,7 @@
       <div class="txt reveal"><div class="kicker">AI VOD analysis</div><h3>It watches the whole stream so you don't have to</h3>
         <p>AutoClip examines every second of your VOD, however long, and fuses everything it learns into one picture of where the interesting moments are.</p>
         <ul><li>Picture: motion, HUD and kill-feed activity, flashes, banners, hard cuts</li><li>Audio: loudness against your normal volume, laughter-like bursts, excited voice, pauses</li><li>Speech: the full timestamped transcript</li><li>Chat: message spikes and hype emotes (Twitch)</li></ul></div>
-      <div class="shot reveal"><img src="assets/img/shot-home-crop.jpg" alt="AutoClip's Home screen while a VOD is being analysed" loading="lazy" width="930" height="690"></div>
+      <div class="shot reveal"><img src="assets/img/shot-home-crop.jpg" alt="AutoClip's Home screen while a VOD is being analysed" loading="lazy" width="930" height="520"></div>
     </div>
 
     <div class="row flip" id="transcription">
@@ -87,11 +87,11 @@
       <div class="txt reveal"><div class="kicker">Video analysis</div><h3>It actually looks at the footage</h3>
         <p>Beyond motion and flashes, AutoClip can show sampled frames from each candidate to a vision model, so "a goal was scored" is something it sees, not something it infers from volume.</p>
         <ul><li><b>Free local AI</b>: a one-time 305 MB download, private, no account</li><li><b>Claude</b> (optional, your own API key)</li><li><b>Ollama</b> vision models, if you run them</li></ul></div>
-      <div class="shot reveal"><img src="assets/img/shot-settings-crop.jpg" alt="AutoClip Settings: speech transcription, local AI, Claude key and GPU acceleration" loading="lazy" width="930" height="555"></div>
+      <div class="shot reveal"><img src="assets/img/shot-settings-crop.jpg" alt="AutoClip Settings: speech transcription, local AI, Claude key and GPU acceleration" loading="lazy" width="930" height="460"></div>
     </div>
 
     <div class="row flip" id="review">
-      <div class="shot reveal"><img src="assets/img/shot-review-crop.jpg" alt="Reviewing a clip: video, score, editable title and caption, approve and reject" loading="lazy" width="930" height="580"></div>
+      <div class="shot reveal"><img src="assets/img/shot-review-crop.jpg" alt="Reviewing a clip: video, score, editable title and caption, approve and reject" loading="lazy" width="930" height="510"></div>
       <div class="txt reveal"><div class="kicker">Clip review</div><h3>You're always the editor</h3>
         <p>Every clip is shown with its score and the reason it was picked. Watch it full-size, approve or reject it with one key, rename it (the file is renamed too) and write the caption you want.</p>
         <ul><li><kbd>A</kbd> approve, <kbd>R</kbd> reject, arrow keys to move</li><li>Vertical 9:16 with zoom, full-frame or fill layouts</li><li>Optional burned-in captions from the transcript</li></ul></div>
@@ -102,14 +102,21 @@
         <p>AutoClip uses TikTok's official Login Kit and Content Posting API. Connect as many TikTok accounts as you like, pick which one a batch goes to, and watch the queue.</p>
         <ul><li>Sign-in happens on tiktok.com, never inside AutoClip</li><li>Tokens are encrypted for your Windows account only</li><li>The same video is never uploaded twice to the same account (even renamed)</li><li>Rate limits are respected automatically</li></ul>
         <p class="faint" style="font-size:.9rem">Posting needs a free TikTok developer app. Until TikTok approves ("audits") it, clips arrive as drafts in your TikTok inbox for you to finish.</p></div>
-      <div class="shot reveal"><img src="assets/img/shot-upload-crop.jpg" alt="Upload screen with two TikTok accounts and the upload queue" loading="lazy" width="930" height="725"></div>
+      <div class="shot reveal"><img src="assets/img/shot-upload-crop.jpg" alt="Upload screen with two TikTok accounts and the upload queue" loading="lazy" width="930" height="600"></div>
     </div>
 
     <div class="row flip" id="updates">
-      <div class="shot reveal"><img src="assets/img/shot-updates-crop.jpg" alt="AutoClip Settings, Updates card: version, automatic checks and release channel" loading="lazy" width="930" height="245"></div>
+      <div class="shot reveal"><img src="assets/img/shot-updates-crop.jpg" alt="AutoClip Settings, Updates card: version, automatic checks and release channel" loading="lazy" width="930" height="260"></div>
       <div class="txt reveal"><div class="kicker">Automatic updates</div><h3>Stay current without lifting a finger</h3>
         <p>AutoClip checks for new versions, downloads them in the background and verifies them before anything runs: every release is cryptographically signed, so a tampered or fake update is rejected.</p>
         <ul><li>A small, dismissible notice: Update now or Later</li><li>Never installs while a VOD is processing or clips are uploading</li><li>Can install when you close the app</li><li>Settings, accounts, projects and clips are kept</li><li>Interrupted update? It tells you and offers a retry. Older versions stay available</li></ul></div>
+    </div>
+
+    <div class="row" id="appearance">
+      <div class="txt reveal"><div class="kicker">Make it yours</div><h3>Your colour, your theme</h3>
+        <p>AutoClip glows in whatever accent colour you pick, in a dark or light theme. A status badge in the title bar and a slim status bar along the bottom show what it is doing at a glance.</p>
+        <ul><li>12 ready-made accent colours, or any custom colour</li><li>Dark and light themes</li><li>Keep the window on top while you work</li></ul></div>
+      <div class="shot reveal"><img src="assets/img/shot-appearance-crop.jpg" alt="AutoClip Settings, Appearance card: theme and accent colour choices" loading="lazy" width="930" height="235"></div>
     </div>
   </div>
 </section>
@@ -122,7 +129,7 @@
       <div class="card reveal"><h3>No silent failures</h3><p>If transcription, chat or AI review can't run, AutoClip says exactly which stage failed and why, instead of pretending everything worked.</p></div>
       <div class="card reveal"><h3>First-run setup</h3><p>A short wizard picks your folders, checks your GPU and offers the optional extras. Skip anything you like.</p></div>
     </div>
-    <div class="cta" style="margin-top:44px"><a class="btn big" data-fill="href" href="https://github.com/saberapexyt-commits/autoclip-app/releases/download/v1.0.5/AutoClip-Setup-1.0.5.exe"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>Download for Windows</a></div>
+    <div class="cta" style="margin-top:44px"><a class="btn big" data-fill="href" href="https://github.com/saberapexyt-commits/autoclip-app/releases/download/v1.0.6/AutoClip-Setup-1.0.6.exe"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>Download for Windows</a></div>
   </div>
 </section>
 
@@ -138,7 +145,7 @@
       <div><h4>Help</h4><a href="docs.html">Documentation</a><a href="support.html">Support</a><a href="https://github.com/saberapexyt-commits/autoclip-app/issues">Report a problem</a></div>
       <div><h4>Legal</h4><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="cookies.html">Cookie Policy</a><a href="licenses.html">Open-source licenses</a></div>
     </div>
-    <div class="fine"><span>© 2026 AutoClip. Version 1.0.5.</span><span>AutoClip is not affiliated with or endorsed by TikTok, Twitch or Kick.</span></div>
+    <div class="fine"><span>© 2026 AutoClip. Version 1.0.6.</span><span>AutoClip is not affiliated with or endorsed by TikTok, Twitch or Kick.</span></div>
   </div>
 </footer>
 <script src="assets/js/site.js" defer></script>

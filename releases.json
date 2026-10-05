@@ -1,12 +1,35 @@
 {
   "schema": 1,
   "product": "AutoClip",
-  "updated": "2026-10-05T10:45:33Z",
+  "updated": "2026-10-05T11:17:05Z",
   "latest": {
-    "stable": "1.0.5",
+    "stable": "1.0.6",
     "beta": null
   },
   "releases": [
+    {
+      "version": "1.0.6",
+      "channel": "stable",
+      "date": "2026-10-05",
+      "notes": [
+        "A whole new look: an accent-coloured window edge, glowing sidebar, a status badge in the title bar and a status bar along the bottom.",
+        "Settings -> Appearance: dark or light theme, 12 accent colours or any custom colour, and a switch for the status bar. A pin button keeps AutoClip on top of other windows, and the window has rounded corners on Windows 11.",
+        "Rejected clips no longer clutter the Clips page: they are hidden, with a \"Show rejected\" button to bring them back.",
+        "Review shows a still frame of the clip while the video loads."
+      ],
+      "mandatory": false,
+      "assets": [
+        {
+          "platform": "windows-x64",
+          "kind": "installer",
+          "filename": "AutoClip-Setup-1.0.6.exe",
+          "url": "https://github.com/saberapexyt-commits/autoclip-app/releases/download/v1.0.6/AutoClip-Setup-1.0.6.exe",
+          "sha256": "0579511881e81d44e92fd01e9a90fd355ca490ea01e83abf3c95f8453f8c56db",
+          "size": 167196491,
+          "signature": "wcRs6aksgRXoWFFgr1dY3/Eje1IOKSZKBttAINOUiP1YTqVUOZzLMWGH82AKNvIWBSZoKIX84dcCIe5lP8X8Cg=="
+        }
+      ]
+    },
     {
       "version": "1.0.5",
       "channel": "stable",
