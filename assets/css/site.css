@@ -14,7 +14,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 84px; }
 body { margin: 0; background: var(--bg); color: var(--text); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-img, svg { max-width: 100%; display: block; }
+img, svg { max-width: 100%; height: auto; display: block; }
 a { color: var(--cyan); text-decoration: none; } a:hover { text-decoration: underline; }
 :root[data-theme="light"] a { color: #0a58d6; }
 h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 .5em; letter-spacing: -.02em; }
@@ -71,7 +71,7 @@ header.site.scrolled { border-color: var(--line); }
 .cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .shot { position: relative; margin: 54px auto 0; max-width: 1060px; border-radius: 18px; padding: 10px; background: linear-gradient(180deg, rgba(255,255,255,.1), rgba(255,255,255,.02));
   border: 1px solid var(--line); box-shadow: var(--shadow); }
-.shot img { border-radius: 11px; width: 100%; }
+.shot img { border-radius: 11px; width: 100%; height: auto; display: block; }
 .shot .bar { display: flex; gap: 7px; padding: 4px 8px 10px; } .shot .bar i { width: 11px; height: 11px; border-radius: 50%; background: var(--line); }
 
 /* sections */
