@@ -99,8 +99,8 @@ section.alt { background: var(--bg2); border-block: 1px solid var(--line); }
 @media (max-width: 960px) { .steps { grid-template-columns: repeat(2, 1fr); gap: 30px 18px; } } @media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
 
 /* feature rows */
-.row { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: center; margin: 70px 0; }
-.row.flip { grid-template-columns: 1.15fr 1fr; } .row.flip .txt { order: 2; }
+.row { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.6fr); gap: 48px; align-items: center; margin: 70px 0; }
+.row.flip { grid-template-columns: minmax(0,1.6fr) minmax(0,1fr); } .row.flip .txt { order: 2; }
 .row .txt h3 { font-size: 1.7rem; letter-spacing: -.02em; } .row .txt p { color: var(--muted); }
 .row .txt ul { color: var(--muted); padding-left: 1.2em; margin: 0 0 1em; } .row .txt li { margin: .35em 0; }
 .row .shot { margin: 0; padding: 7px; }
@@ -152,3 +152,10 @@ footer.site h4 { color: var(--text); font-size: .9rem; margin-bottom: 12px; } fo
 /* reveal on scroll (only when JS runs; respects reduced motion) */
 .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; } .js .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .js .reveal { opacity: 1; transform: none; transition: none; } .btn, .card { transition: none; } }
+
+/* click a screenshot to see it full size */
+.shot img { cursor: zoom-in; }
+.lightbox { position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center; padding: 24px; background: rgba(4, 7, 16, .86); backdrop-filter: blur(6px); cursor: zoom-out; }
+.lightbox.open { display: flex; }
+.lightbox img { max-width: min(96vw, 1568px); max-height: 92vh; width: auto; height: auto; border-radius: 12px; box-shadow: 0 30px 90px rgba(0,0,0,.6); cursor: zoom-out; }
+.lightbox button { position: absolute; top: 16px; right: 20px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--panel); color: var(--text); font-size: 22px; line-height: 1; cursor: pointer; }

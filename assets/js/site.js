@@ -87,6 +87,20 @@
     if (recent) recent.innerHTML = (latest.notes || []).slice(0, 6).map(function (n) { return "<li>" + esc(n) + "</li>"; }).join("");
   }).catch(function () { /* keep the content that was baked into the page */ });
 
+
+  /* ---- click a screenshot to enlarge it ---- */
+  var box = document.createElement("div"); box.className = "lightbox"; box.setAttribute("role", "dialog"); box.setAttribute("aria-label", "Screenshot");
+  box.innerHTML = '<button type="button" aria-label="Close">&times;</button><img alt="">'; document.body.appendChild(box);
+  function closeBox() { box.classList.remove("open"); }
+  box.addEventListener("click", closeBox);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeBox(); });
+  document.querySelectorAll(".shot img").forEach(function (im) {
+    im.addEventListener("click", function () {
+      var t = box.querySelector("img");
+      t.src = im.getAttribute("src"); t.alt = im.alt; box.classList.add("open");
+    });
+  });
+
   /* ---- copy the checksum ---- */
   document.querySelectorAll("[data-copy]").forEach(function (b) {
     b.addEventListener("click", function () {
