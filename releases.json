@@ -1,12 +1,32 @@
 {
   "schema": 1,
   "product": "AutoClip",
-  "updated": "2026-10-05T09:40:30Z",
+  "updated": "2026-10-05T10:28:19Z",
   "latest": {
-    "stable": "1.0.3",
+    "stable": "1.0.4",
     "beta": null
   },
   "releases": [
+    {
+      "version": "1.0.4",
+      "channel": "stable",
+      "date": "2026-10-05",
+      "notes": [
+        "Hashtags: uploads now get up to 5 popular hashtags that fit the clip. In Review, choose Gaming or IRL for each clip; Settings -> Hashtags sets the default, your own tags and an on/off switch."
+      ],
+      "mandatory": false,
+      "assets": [
+        {
+          "platform": "windows-x64",
+          "kind": "installer",
+          "filename": "AutoClip-Setup-1.0.4.exe",
+          "url": "https://github.com/saberapexyt-commits/autoclip-app/releases/download/v1.0.4/AutoClip-Setup-1.0.4.exe",
+          "sha256": "f7667d9bcd6686fe65844769e788efcfda9560917fa170ec5a2ed2ac62fc9d4f",
+          "size": 167198358,
+          "signature": "jrE8xhefQFOOMDCY0/2x+S3d6pdSm6th6F+oJI98yj+GxTdP6PXmmgXK01AO155I9z9TYDWEpBLb29MS/CbYAw=="
+        }
+      ]
+    },
     {
       "version": "1.0.3",
       "channel": "stable",
