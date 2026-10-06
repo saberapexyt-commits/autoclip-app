@@ -1,12 +1,32 @@
 {
   "schema": 1,
   "product": "AutoClip",
-  "updated": "2026-10-05T11:17:05Z",
+  "updated": "2026-10-06T11:07:12Z",
   "latest": {
-    "stable": "1.0.6",
+    "stable": "1.0.7",
     "beta": null
   },
   "releases": [
+    {
+      "version": "1.0.7",
+      "channel": "stable",
+      "date": "2026-10-06",
+      "notes": [
+        "Fixed speech transcription failing with \"Access is denied\" on PCs where Windows blocks the default model folder: the Whisper model is now saved in AutoClip's own folder when that happens, and the error explains what to check."
+      ],
+      "mandatory": false,
+      "assets": [
+        {
+          "platform": "windows-x64",
+          "kind": "installer",
+          "filename": "AutoClip-Setup-1.0.7.exe",
+          "url": "https://github.com/saberapexyt-commits/autoclip-app/releases/download/v1.0.7/AutoClip-Setup-1.0.7.exe",
+          "sha256": "e0c5a8df4016b31c44d4b41ce121899d48a0a027ba815ae4c14acd34e8f53bdd",
+          "size": 167192687,
+          "signature": "2ZNmekLngSlXf5k24+EJlmtvfmM+MAqVYIBathE3pYY20CeoCbN97kTdqmiuHIvPbU6u0krHd64WBpG767A9CQ=="
+        }
+      ]
+    },
     {
       "version": "1.0.6",
       "channel": "stable",
